@@ -1,0 +1,26 @@
+.main-navbar {
+    position: relative;
+    top: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: #DA5C5C;
+    display: flex;
+    align-items: center;
+}
+
+.main-navbar #logo {
+    color: white;
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.4rem;
+}
+
+.main-navbar a {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}

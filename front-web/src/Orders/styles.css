@@ -1,0 +1,39 @@
+.orders-steps-container {
+    height: 6rem;
+    background-color: #F5F5F5;
+    display: flex;
+}
+
+.orders-steps-container .orders-steps-content {
+    margin-left: 6.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.orders-steps-container .orders-steps-content .orders-steps-title {
+    margin-right: 4rem;
+    color: #DA5C5C;
+}
+
+.orders-steps-container .orders-steps-content .steps-item li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.orders-steps-container .orders-steps-content .steps-item li #step-number {
+    color: #DA5C5C;
+    font-size: 0.85rem;
+    margin-right: 0.3rem;
+}
+
+.orders-steps-container .orders-steps-content .steps-item li p {
+    font-size: 0.7rem;
+    font-weight: 300;
+}
+
+.orders-steps-container .orders-steps-content .steps-item li p strong {
+    font-size: 0.725rem;
+    font-weight: 500;
+}
+
