@@ -1,3 +1,5 @@
+/* STEPS-HEADER STYLES */
+
 .orders-steps-container {
     height: 6rem;
     background-color: #F5F5F5;
@@ -37,3 +39,93 @@
     font-weight: 500;
 }
 
+/* ORDER-CARD STYLES */
+
+.order-card-container {
+    width: 235px;
+    max-width: 230px;
+    display: flex;
+    flex-grow: 1;
+    padding: 0.15rem 0.15rem 0.6rem 0.15rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 10px 3px rgba(130,130,130,0.7);
+    margin: 0.5rem;
+    transition: all .5s;
+}
+
+.order-card-container:hover {
+    transform: scale(1.05);
+}
+
+
+.order-card-container .order-card-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding-top: 0.4rem;
+    margin-bottom: 0.35rem;
+    color: #DA5C5C;
+
+    
+}
+
+.order-card-container .order-card-image {
+    margin-bottom: 0.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.25rem;
+}
+
+.order-card-container .order-card-price {
+    width: 100%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0 0.5rem 0.5rem 1.5rem;
+    color: #DA5C5C;
+}
+
+.order-card-container .order-card-description {
+    border-top: 1px solid rgb(187, 187, 187);
+    padding-top: 0.25rem;
+}
+
+.order-card-container .order-card-description span {
+    font-size: 0.65rem;
+    padding: 0 0.5rem 0 0.5rem;
+    color: #9E9E9E;
+    font-weight: 600;
+
+}
+
+.order-card-container .order-card-description p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+    color: #9E9E9E;
+    padding: 0 0.5rem 0.8rem 0.5rem;
+
+}
+
+/* PRODUCTS LIST STYLES */
+
+.orders-list-container {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.orders-list-container .orders-list-content {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+    grid-gap: 10px 0px;
+    justify-content: space-between;
+}
