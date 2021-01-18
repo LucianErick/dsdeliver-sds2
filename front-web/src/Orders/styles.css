@@ -66,9 +66,7 @@
     font-weight: 600;
     padding-top: 0.4rem;
     margin-bottom: 0.35rem;
-    color: #DA5C5C;
-
-    
+    color: #DA5C5C;    
 }
 
 .order-card-container .order-card-image {
@@ -129,3 +127,64 @@
     grid-gap: 10px 0px;
     justify-content: space-between;
 }
+
+/* ORDER LOCATION STYLES */
+
+.order-location-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.order-location-container .order-location-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 70%;
+    height: 500px;
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 10px 3px rgba(130,130,130,0.7);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.order-location-container .order-location-content .order-location-title {
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
+    font-weight: 600;
+    padding-top: 0.4rem;
+    height: auto;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .filter {
+    width: 80%;
+  }
+  
+  .filter > div {
+    border-radius: 10px;
+    min-height: 60px;
+  }
+  
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    z-index: 0;
+  }
+
+  #marcador {
+      font-size: 0.6rem;
+  }
