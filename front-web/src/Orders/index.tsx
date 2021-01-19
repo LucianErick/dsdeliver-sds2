@@ -6,7 +6,7 @@ import OrderLocation from './OrderLocation'
 import OrderSummary from './OrderSummary'
 import ProductsList from './ProductsList'
 import StepsHeader from './StepsHeader'
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 import { OrderLocationData, Product } from './Types'
 import './styles.css'
 
@@ -38,30 +38,35 @@ function Orders() {
     }
 
     const handleSubmit = () => {
+
         const productsIds = selectedProducts.map(({ id }) => ({ id }));
         const payload = {
-          ...orderLocation!,
-          products: productsIds
+            ...orderLocation!,
+            products: productsIds
         }
-      
-        saveOrder(payload).then((response) => {
-          toast.error(`Pedido enviado com sucesso! Nº ${response.data.id}`);
-          setSelectedProducts([]);
-        })
-          .catch(() => {
-            toast.warning('Erro ao enviar pedido');
-          })
-      }
+
+        if (productsIds.length !== 0) {
+            saveOrder(payload).then((response) => {
+                toast.error(`Pedido enviado com sucesso! Nº ${response.data.id}`);
+                setSelectedProducts([]);
+            })
+                .catch(() => {
+                    toast.warning('Erro ao enviar pedido');
+                })
+        } else {
+            toast.info("Selecione um produto.")
+        }
+    }
 
     return (
         <div className="orders-container">
             <div className="orders-content">
                 <StepsHeader />
                 <ProductsList products={products}
-                    onSelectProduct={handleSelectProduct} 
-                    selectedProducts={selectedProducts}/>
+                    onSelectProduct={handleSelectProduct}
+                    selectedProducts={selectedProducts} />
                 <OrderLocation onChangeLocation={location => setOrderLocation(location)} />
-                <OrderSummary amount={selectedProducts.length} totalPrice={totalPrice} onSubmit={handleSubmit}/>
+                <OrderSummary amount={selectedProducts.length} totalPrice={totalPrice} onSubmit={handleSubmit} />
                 <Footer />
             </div>
         </div>

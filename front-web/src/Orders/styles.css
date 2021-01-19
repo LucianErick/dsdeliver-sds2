@@ -1,9 +1,10 @@
 /* STEPS-HEADER STYLES */
 
 .orders-steps-container {
-    height: 6rem;
+    height: auto;
     background-color: #F5F5F5;
     display: flex;
+    padding: 2rem;
 }
 
 .orders-steps-container .orders-steps-content {
@@ -140,7 +141,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 260px);
     grid-gap: 10px 0px;
-    justify-content: space-between;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 /* ORDER LOCATION STYLES */
@@ -209,7 +211,7 @@
   .order-summary-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 14.2rem;
+    margin-bottom: 4.0rem;
     margin-top: 0.4rem;
     align-items: center;
   }
@@ -230,6 +232,7 @@
 .order-summary-container .order-summary-content .amount-container {
     display: flex;
     flex-direction: column;
+    margin: 0.2rem;
 }
 
 .order-summary-container .order-summary-content .amount-container .amount-selected-container,.amount-value-container {
@@ -255,5 +258,36 @@
 }
 
 .order-summary-container .order-summary-content .make-order-btn:hover {
-    background-color: #e7e7e7;
+    background-color: #d4d3d3;
+}
+
+.css-1wa3eu0-placeholder {
+    font-size: 0.6rem;
+}
+
+/* media queries */
+
+@media(max-width: 775px) {
+    .orders-steps-container {
+        justify-content: center;
+    }
+
+    .orders-steps-container .orders-steps-content {
+        margin-left: 0.2rem;
+    }
+}
+
+@media(max-width: 435px) {
+    .orders-steps-container .orders-steps-content .steps-item li:nth-child(2) {
+        padding-top: 0.5rem;
+    }
+}
+
+@media(max-width: 580px) {
+    .order-summary-content, .order-location-container .order-location-content {
+        width: 90%;
+        margin: 0.6rem;
+    }
+
+    
 }

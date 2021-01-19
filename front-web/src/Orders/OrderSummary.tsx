@@ -24,7 +24,6 @@ function OrderSummary({amount, totalPrice, onSubmit}: Props) {
                 <button 
                 className="make-order-btn"
                 onClick = {onSubmit}
-                
                 >ENVIAR PEDIDO</button>
                 
             </div>

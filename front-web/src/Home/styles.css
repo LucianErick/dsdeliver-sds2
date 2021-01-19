@@ -78,3 +78,12 @@
         width: 100%;
     }
 }
+
+@media(min-width: 374px) {
+    .footer-homepage {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
